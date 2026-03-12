@@ -1,0 +1,38 @@
+<div class="container py-5">
+    <h2 class="fw-bold mb-4">Historial de aparcamientos</h2>
+    <div class="position-relative">
+        <table class="table table-striped" style="<%= !user ? 'filter: blur(4px); pointer-events: none' : '' %>">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Ubicación</th>
+                    <th>Duración</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (entries.length === 0) { %>
+                    <tr>
+                        <td class="text-center text-muted" colspan="3">No hay aparcamientos registrados.</td>
+                    </tr>
+                <% } else { %>
+                    <% entries.forEach((entry) => { %>
+                        <tr>
+                            <td><%= new Date(entry.start_time).toLocaleDateString('es-ES') %></td>
+                            <td><%= entry.lat.toFixed(5) %>, <%= entry.lng.toFixed(5) %></td>
+                            <td><%= entry.duration %> min</td>
+                        </tr>
+                    <% }) %>
+                <% } %>
+            </tbody>
+        </table>
+        <% if (!user) { %>
+            <div class="position-absolute top-50 start-50 translate-middle text-center">
+                <div class="bg-white p-4 rounded shadow">
+                    <h5 class="fw-bold">🔒 Contenido bloqueado</h5>
+                    <p class="text-muted">Inicia sesión para ver tu historial.</p>
+                    <a class="btn btn-primary" href="/login">Iniciar sesión</a>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>

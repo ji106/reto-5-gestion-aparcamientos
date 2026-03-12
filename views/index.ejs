@@ -1,0 +1,37 @@
+<div class="d-flex flex-column" style="min-height: calc(100vh - 120px);">
+  <section class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img class="img-fluid" src="https://img.freepik.com/free-vector/car-parking-concept-illustration_114360-1756.jpg" alt="Parking">
+      </div>
+      <div class="col-md-6">
+        <h1 class="fw-bold display-5">Localiza tu coche <br> al instante</h1>
+        <hr style="width: 60px; border: 3px solid #0d6efd; opacity: 1;">
+        <p class="text-muted">Guarda la ubicación de tu vehículo con un solo clic y encuéntralo fácilmente cuando lo necesites.</p>
+        <p class="text-muted">Accede a tu historial de aparcamientos y sincroniza tus datos desde cualquier dispositivo.</p>
+        <a class="btn btn-primary btn-lg mt-2" href="#map">Aparcar aquí</a>
+      </div>
+    </div>
+  </section>
+  <section class="container py-5" id="map-section">
+    <div class="row g-4">
+      <div class="col-md-8">
+        <div id="map" style="height: 450px; border-radius: 12px;"></div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body d-flex flex-column gap-3">
+            <h5 class="fw-bold">Panel de control</h5>
+            <div class="alert alert-secondary" id="status">No hay aparcamiento activo.</div>
+            <div class="d-none" id="info">
+              <p class="mb-1"><strong>Distancia:</strong> <span id="distance">--</span></p>
+              <p class="mb-1"><strong>Tiempo:</strong> <span id="time">--</span></p>
+            </div>
+            <button class="btn btn-primary" id="btn-park">🅿 Guardar aparcamiento</button>
+            <button class="btn btn-danger d-none" id="btn-finish">✖ Finalizar aparcamiento</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
