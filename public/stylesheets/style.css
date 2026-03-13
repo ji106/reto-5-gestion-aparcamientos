@@ -30,6 +30,7 @@ footer {
     display: block;
     padding: 3px 0;
     transition: color 0.2s, opacity 0.2s;
+    margin-top: auto;
 
     &:hover {
       opacity: 1;
