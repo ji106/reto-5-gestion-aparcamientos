@@ -27,9 +27,8 @@ router.get('/logout', (req, res) => {
 });
 
 router.get('/history', (req, res) => {
-  if (!req.session.user) return res.redirect('/login');
   const entries = db.prepare('SELECT * FROM history ORDER BY id DESC').all();
-  res.render('history', { title: 'Historial', entries });
+  res.render('history', { title: 'Historial', entries, user: req.session.user || null });
 });
 
 router.get('/contact', (req, res) => {

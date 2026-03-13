@@ -1,15 +1,15 @@
 <div class="d-flex flex-column" style="min-height: calc(100vh - 120px);">
   <section class="container py-5">
     <div class="row align-items-center">
-      <div class="col-md-6">
-        <img class="img-fluid" src="https://img.freepik.com/free-vector/car-parking-concept-illustration_114360-1756.jpg" alt="Parking">
+      <div class="col-12 col-lg-8 text-center">
+        <img class="img-fluid" src="/images/parking.png" alt="Parking">
       </div>
-      <div class="col-md-6">
-        <h1 class="fw-bold display-5">Localiza tu coche <br> al instante</h1>
-        <hr style="width: 60px; border: 3px solid #0d6efd; opacity: 1;">
-        <p class="text-muted">Guarda la ubicación de tu vehículo con un solo clic y encuéntralo fácilmente cuando lo necesites.</p>
-        <p class="text-muted">Accede a tu historial de aparcamientos y sincroniza tus datos desde cualquier dispositivo.</p>
-        <a class="btn btn-primary btn-lg mt-2" href="#map">Aparcar aquí</a>
+      <div class="col-12 col-lg-4">
+        <h1 class="fw-bold display-6">Localiza tu coche <br> al instante</h1>
+        <hr class="hero-divider" style="width: 70px; height: 10px;">
+        <p class="fs-5">Guarda la ubicación de tu vehículo con un solo clic y encuéntralo fácilmente cuando lo necesites.</p>
+        <p class="fs-5">Accede a tu <strong>historial de aparcamientos</strong> y sincroniza tus datos desde cualquier dispositivo.</p>
+        <a class="btn btn-park btn-lg mt-2 px-4 py-3" href="#map">Aparcar aquí</a>
       </div>
     </div>
   </section>
@@ -27,8 +27,10 @@
               <p class="mb-1"><strong>Distancia:</strong> <span id="distance">--</span></p>
               <p class="mb-1"><strong>Tiempo:</strong> <span id="time">--</span></p>
             </div>
-            <button class="btn btn-primary" id="btn-park">🅿 Guardar aparcamiento</button>
-            <button class="btn btn-danger d-none" id="btn-finish">✖ Finalizar aparcamiento</button>
+            <button class="btn btn-park px-4 py-3" id="btn-park">Guardar aparcamiento</button>
+            <button class="btn btn-danger d-none" id="btn-finish">
+              <i class="bi bi-x-circle me-1"></i>Finalizar aparcamiento
+            </button>
           </div>
         </div>
       </div>
